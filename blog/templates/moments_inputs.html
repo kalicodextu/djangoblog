@@ -10,7 +10,30 @@
     <form action="?" method="post">
         <fieldset>
             <legend>请输入并提交</legend>
-            {{form.asp}}
+            <table>
+                <tr>
+                    <td>Content:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>User name:</td>
+                    <td><input type="text" name="匿名"></td>
+                </tr>
+                <tr>
+                    <td>Kind:</td>
+                    <td colspan="2">
+                    <select name="kind">
+                        <option value="python">python 技术</option>
+                        <option value="Database" selected="selected">数据库技术</option>
+                        <option value="economical">经济学</option>
+                        <option value="question">文体咨询</option>
+                        <option value="method">个人心情</option>
+                        <option value="other">其他</option>
+
+                    </select>    
+                    </td>    
+                </tr>
+            </table>
             <input type="submit" value="submit" />
         </fieldset>   
     </form>
