@@ -18,6 +18,6 @@ KIND_CHOICES = (
 # Create your models here.
 class Moment(models.Model):
     content = models.CharField(max_length=300)
-    usr_name = models.CharField(max_length=21, default = '匿名')
+    user_name = models.CharField(max_length=21, default = '匿名')
     # 修改kind的定义，加入choices参数
     kind = models.CharField(max_length=21, choices = KIND_CHOICES, default = KIND_CHOICES[0])
