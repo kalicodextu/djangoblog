@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# # manage.py makemigration/migrate will ckeck INSTALLED_APPS who use models
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',

@@ -4,18 +4,18 @@ from __future__ import unicode_literals
 from django.contrib import admin
 
 # Register your models here.
-from .models import Moment
+from .models import BlogPost
 
 
 class MomentAdmin(admin.ModelAdmin):
     fieldsets = (
         ("消息内容", {
-                'fields': ('content', 'kind')
+                'fields': ('title', 'body', 'timestamp')
         }),
         ("用户消息", {
-                'fields': ('user_name',),
+                'fields': ('author',),
         }),
     )
 
 
-admin.site.register(Moment, MomentAdmin)
+admin.site.register(BlogPost, MomentAdmin)
