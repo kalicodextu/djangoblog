@@ -10,3 +10,5 @@ class BlogPost(models.Model):
     author = models.CharField(max_length=160)
     body = models.TextField()
     timestamp = models.DateTimeField()
+    class Meta:
+        ordering = ('-timestamp',)
