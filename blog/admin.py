@@ -17,5 +17,11 @@ class MomentAdmin(admin.ModelAdmin):
         }),
     )
 
+    list_display = (
+        'title',
+        'author',
+        'timestamp'
+    )
+
 
 admin.site.register(BlogPost, MomentAdmin)
