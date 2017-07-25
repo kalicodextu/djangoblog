@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 import os
-from blog.forms import MomentForm
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse
@@ -10,6 +9,7 @@ from django.shortcuts import render, render_to_response
 from blog.models import BlogPost
 from django.template import loader, Context, RequestContext
 from datetime import datetime
+from .forms import BlogPostForm
 
 # Create your views here.
 
@@ -37,7 +37,7 @@ def archive(request):
     # t = loader.get_template("archive.html")
     # c = Context().update({'posts': posts})
     # return HttpResponse(t.render(c))
-    return render_to_response('archive.html', {'posts': posts,}, RequestContext(request))
+    return render(request, 'archive.html', {'posts': posts,'form':BlogPostForm()})
 
 
 # archive = lambda req: render_to_response('archive.html', {'posts': BlogPost.objects.all()})
