@@ -10,12 +10,14 @@
 
 <body>
     <form action="/blog/create" method="post">{% csrf_token %} 
-        Titile:
+        <!-- Titile:
         <input type="text" name="title"><br> 
         Author:
         <input type="text" name="author"><br> 
         Body:
         <textarea name="body" cols="60" rows="3"></textarea><br>
+        <input type="submit"> -->
+        <table>{{ form }}</table><br>
         <input type="submit">
     </form>
     <hr> {% for post in posts %}
