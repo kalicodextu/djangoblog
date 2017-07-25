@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 from django.forms import ModelForm
 from blog.models import BlogPost
+from django import forms
 
 
-class MomentForm(ModelForm):
+class BlogPostForm(ModelForm):
     class Meta:
         model = BlogPost
-        fields = '__all__'
+        # fields = '__all__'
+        exclude = ('timestamp',)
